@@ -1,0 +1,52 @@
+<html>
+    <head>
+        <title>
+           My Login page
+        </title>
+        <link rel="stylesheet" href="../src/asset/styleLogin2.css">
+    </head>
+    <body>
+
+        <div class="login_box">
+            <img src="../src/img/gray user.webp" alt="Login image">
+          <h1>Login Portal</h1>
+          <span class="help"><img src="../src/img/3lines.png" alt="help" id="help"></span>
+          <form action="">
+            <p class="login" onclick="handleLogin('login')" ><label for="Username">Username</label> </p>
+            <input type="text" value="" id="Username">
+            <p class="password" onclick="handleLogin('password')"><label for="Password">Password</label> </p>
+            <input type="password" name="" id="Password">
+            <input type="submit" value="Login">
+          </form>
+
+        </div>
+
+        <div class="help_box hideModal">
+          <div>
+            <p>HELP SECTION</p>
+            <img src="../src/img/close.png" alt="" id="close">
+            <!-- <span><img src="../src/img/avatarUser.webp" alt=""> <span>Already User</p> </span>
+            
+            <span><img src="../src/img/gray user.webp" alt=""> <span>Not yet User</p> </span> -->
+          </div>
+        </div>
+
+        <script type="text/javaScript">
+            function handleLogin(className){
+               document.querySelector(`.${className}`).classList.add('normalDisplay')
+           }
+           document.querySelector('#close').addEventListener('click',()=>{
+             console.log('close modal')
+             document.querySelector('.help_box').classList.toggle('hideModal')
+             //document.querySelector('.help_box').classList.toggle('help_box_translate')
+           })
+           document.querySelector('#help').addEventListener('click',()=>{
+             document.querySelector('.help_box').classList.toggle('hideModal')
+           })
+        /* let login = document.querySelector('.login')
+         login.addEventListener('Click',()=>{
+            login.classList.toggle('loginNormalDisplay')
+         })*/
+        </script>
+    </body>
+</html>

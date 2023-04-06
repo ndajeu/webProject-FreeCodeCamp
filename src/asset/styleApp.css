@@ -1,0 +1,12 @@
+.nav-container ul{
+    list-style: none;
+    /* display: flex; */
+    /* justify-content: space-evenly; */
+}
+.nav-container{
+    background-color: #bfbfe6;
+    height: 30px;
+    align-items: center;
+    display: flex;
+    justify-content: space-evenly;
+}

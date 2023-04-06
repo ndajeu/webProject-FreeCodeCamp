@@ -1,0 +1,68 @@
+<html>
+    <head>
+        <title> Dropdown Menu</title>
+        <link rel="stylesheet" href="../src/asset/style.css">
+        <script src="https://cdn.jsdelivr.net/npm/vue@2.7.14/dist/vue.js"></script>
+    </head>
+
+    <body>
+     <div class="menu__bar">
+     <h1 class="logo">Light<span>Code.</span></h1>
+     <ul>
+        <li><a href="#">Home</a></li>
+        <!-- <li><a href="#" class="dropdown" onfocus="handleFocus">About</a></li> -->
+        <li>
+          <a href="#" class="dropdown" onmouseenter="setVisibility('true')">About</a>
+
+          <div class="dropdown__menu hide" onmouseleave="setVisibility('false')">
+            <ul>
+                <li><a href="#">Pricing</a></li>
+                <li><a href="#">Protfolio</a></li>
+                <li><a href="#">Team</a></li>
+                <li><a href="#">Faq</a></li>
+                <li><a href="#">Faq2</a></li>
+
+                <li><a href="#">help</a></li>
+            </ul>
+          </div>
+
+        </li>
+        <li><a href="#">Page</a></li>
+        <li><a href="#">Blog</a></li>
+        <li><a href="#">Contact us</a></li>
+        <li><a href="#">Help</a></li>
+     </ul>
+     </div>
+    </body>
+<script type="text/javaScript">
+   
+        //const dropdown_block = document.querySelector('.dropdown')
+        const list = document.querySelector('.dropdown__menu')
+       /* dropdown_block.onmouseenter=()=>{
+            console.log('onclick dropdown')
+            list.classList.remove('hide')
+            list.classList.add('unhide')
+          }
+          list.onmouseleave=()=>{
+            list.classList.remove('unhide')
+            list.classList.add('hide')
+        }*/
+        function setVisibility(hide){
+            console.log('hide ? '+ hide);
+            if(hide==='true'){
+                list.classList.remove('hide')
+                list.classList.add('unhide')
+            }else{
+                list.classList.remove('unhide')
+                list.classList.add('hide')
+            }
+        }
+        var app = new Vue({
+            el:".menu__bar",
+            data:{
+                user:'idris',
+                type:'Shino'
+            }
+        }) 
+</script>
+</html>
