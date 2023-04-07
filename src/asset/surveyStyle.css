@@ -69,11 +69,7 @@ body{
     margin-top: 5px;
 }
 input[type='submit']{
-<<<<<<< HEAD
-    width: 100% ;
-=======
     width: 100%;
->>>>>>> 08773ade1e553db7c7abed927cfb77b78a7428dd
     background-color: var(--green-color);
     color: var(--main-color-text);
     height: 40px;
