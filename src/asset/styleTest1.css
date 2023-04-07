@@ -1,6 +1,6 @@
 :root{
     --main-bg-color: rgb(238, 235, 235);
-    --strong-text: bold;
+    --strong-text: bold  ;
   }
   body{
     font-family: sans-serif;
